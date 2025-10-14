@@ -2,6 +2,3 @@
 # Darian Sidhu
 # Brady Van Unen
 # BUS336 Project
-
-igtorent
-Hello
