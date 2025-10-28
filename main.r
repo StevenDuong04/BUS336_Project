@@ -2,7 +2,7 @@
 # Project: BUS336 Hackathon
 # Purpose: Data cleaning, exploration, and preparation for Tableau
 # Author: Steven Duong, Darian Sidhu, Brady Van Unen
-# Date: Oct 25, 2025
+# Date: Oct 28, 2025
 # ==========================================================
 
 # ---------------------------
@@ -49,9 +49,9 @@ BCA2024 <- BCA2024 %>%
   mutate(
     Stewardship = ifelse(is.na(Stewardship), "No Stewardship", Stewardship),
     Stewardship = factor(Stewardship, levels = c("No Stewardship", "Seeding Stewardship", "Green Streets"))
-  )                                                             # Converting NAs to "No Stewardship," so they are still useable
-                                                                # Converting them into a factor (Categorical variable).
-                                                                # Opens up room to even compare between stewardship types
+  )                                                              # Converting NAs to "No Stewardship," so they are still useable
+                                                                 # Converting them into a factor (Categorical variable).
+                                                                 # Opens up room to even compare between stewardship types
 
 # Removing any other NAs in the data set, done after to prevent all the NAs in the Stewardship column disappearing
 BCA2024 <- na.omit(BCA2024)
