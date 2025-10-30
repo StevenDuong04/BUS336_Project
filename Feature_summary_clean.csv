@@ -1,0 +1,28 @@
+"Stewardship","Feature","avg_change","median_change","n"
+"No Stewardship","Vegetation Score_2024",-0.464583333333333,-0.416666666666667,56
+"Seeding Stewardship","Vegetation Score_2024",-0.0814814814814815,0.0833333333333333,9
+"Green Streets","Vegetation Score_2024",0.148148148148148,0.0416666666666666,18
+"No Stewardship","Total Score_2024",-0.122078474246842,-0.160034013605442,56
+"Seeding Stewardship","Total Score_2024",0.104761904761905,0.0795918367346942,9
+"Green Streets","Total Score_2024",0.266288737717309,0.25765306122449,18
+"No Stewardship","Soil Score_2024",0.410714285714286,0.5,56
+"Seeding Stewardship","Soil Score_2024",0.62962962962963,0.5,9
+"Green Streets","Soil Score_2024",1.39814814814815,1.5,18
+"No Stewardship","Pre-Treatment Score_2024",-0.0178571428571428,-0.0833333333333331,56
+"Seeding Stewardship","Pre-Treatment Score_2024",-0.138888888888889,0,9
+"Green Streets","Pre-Treatment Score_2024",-0.00462962962962959,0,18
+"No Stewardship","Planting Bed Score_2024",-0.215136054421769,-0.107142857142857,56
+"Seeding Stewardship","Planting Bed Score_2024",0.203703703703704,0.142857142857143,9
+"Green Streets","Planting Bed Score_2024",0.186507936507937,0.178571428571429,18
+"No Stewardship","Outlet Score_2024",-0.0919642857142857,0,56
+"Seeding Stewardship","Outlet Score_2024",-0.381481481481481,-0.5,9
+"Green Streets","Outlet Score_2024",-0.0888888888888889,-0.116666666666667,18
+"No Stewardship","Inlet Score_2024",-0.104464285714286,-0.1,56
+"Seeding Stewardship","Inlet Score_2024",0.105555555555556,0.133333333333333,9
+"Green Streets","Inlet Score_2024",-0.126851851851852,-0.15,18
+"No Stewardship","Condition Score_2024",-0.160714285714286,0,56
+"Seeding Stewardship","Condition Score_2024",0.111111111111111,0,9
+"Green Streets","Condition Score_2024",0.0555555555555556,0,18
+"No Stewardship","CDA Score_2024",0.0297619047619048,0,56
+"Seeding Stewardship","CDA Score_2024",0.351851851851852,0.166666666666667,9
+"Green Streets","CDA Score_2024",0.25,0,18
