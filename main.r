@@ -209,6 +209,9 @@ Feature_summary <- feature_changes %>%
     values_to = "Change"
   ) %>%
   group_by(Stewardship, Feature) %>%                             # Here, we are grouping by the two main features, since we
+  mutate(
+    Feature = str_remove(Feature, "_2024$")                      # Removing _2024 to not be confused
+  ) %>%
   summarise(                                                     # did not group by GRI_ID, it will not show up in the table.
     avg_change = mean(Change, na.rm = TRUE),                      # Then calculating the Average change between the two years
     median_change = median(Change, na.rm = TRUE),                 # (2024-2022). Refer to Note on number signs.
