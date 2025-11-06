@@ -148,11 +148,26 @@ BCA_forecast <- BCA_combined %>%
   mutate(
     score_change = `Condition Score_2024` - `Condition Score_2022`,
     annual_change_rate = score_change / 2,
-    predicted_2026 = `Total Score_2024` + (2 * annual_change_rate),
+    predicted_2026 = `Condition Score_2024` + (2 * annual_change_rate),
     change_direction = case_when(                                 # This is just an if/else statement assigning a meaning in a
       score_change < 0  ~ "Improved",                             # new column beside each observation. Easier to interpret each
       score_change > 0  ~ "Worsened",                             # observation score_change. Refer to Note below.
       score_change == 0 ~ "No Change"
+    )
+  )
+
+BCA_forecast_long <- BCA_forecast %>%
+  dplyr::select(`GRI ID`, Stewardship_2024, `Condition Score_2022`, `Condition Score_2024`, predicted_2026) %>%
+  pivot_longer(
+    cols = c(`Condition Score_2022`, `Condition Score_2024`, predicted_2026),
+    names_to = "Year",
+    values_to = "Score"
+  ) %>%
+  mutate(
+    Year = case_when(
+      Year == "Condition Score_2022" ~ 2022,
+      Year == "Condition Score_2024" ~ 2024,
+      Year == "predicted_2026" ~ 2026
     )
   )
 
@@ -227,7 +242,7 @@ Feature_summary <- feature_changes %>%
 # 7. Export cleaned data file for Tableau
 # ---------------------------
 write.csv(BCA_combined, "BCA_combined_clean.csv", row.names = FALSE)
-write.csv(BCA_forecast, "BCA_forecast_clean.csv", row.names = FALSE)
+write.csv(BCA_forecast_long, "BCA_forecast_long_with2026.csv", row.names = FALSE)
 write.csv(BCA_summary, "BCA_summary_clean.csv", row.names = FALSE)
 write.csv(BCA_distribution, "BCA_distribution_clean.csv", row.names = FALSE)
 write.csv(Feature_summary, "Feature_summary_clean.csv", row.names = FALSE)
